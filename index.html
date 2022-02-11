@@ -32,17 +32,22 @@
       <!-- Bill input  -->
 
       <div class="input__container">
-        <h2 class="calc__title">Rekening</h2>
+        <div class="calc__error">
+          <h2 class="calc__title">Rekening</h2>
+          <!-- add calc__title--error class when validation fails-->
+          <h2>Input moet een cijfer zijn</h2>
+        </div>
         <div class="calc__input-group">
           <input type="text" id="bill" name="bill" required placeholder="0" />
         </div>
+        <!-- TODO: voeg incoontje toe aan inputfield -->
 
         <!-- buttons -->
         <h2 class="calc__title span">Selecteer fooi %</h2>
         <div class="calc__buttons">
           <button class="btn btn--primary">5%</button>
           <button class="btn btn--primary">10%</button>
-          <button class="btn btn--secondary">15%</button>
+          <button class="btn btn--primary">15%</button>
           <button class="btn btn--primary">25%</button>
           <button class="btn btn--primary">50%</button>
           <input type="custom" id="custom" name="custom" placeholder="Custom" />
@@ -51,7 +56,8 @@
         <!-- Number of people -->
         <div class="calc__error">
           <h2 class="calc__title">Aantal mensen</h2>
-          <h2 class="calc__title--error">Can't be zero</h2>
+          <!-- add calc__title--error class when validation fails-->
+          <h2>Mag niet 0 zijn</h2>
         </div>
         <div class="calc__input-group">
           <input
@@ -71,17 +77,19 @@
             <h2 class="result__title">Tip Amount</h2>
             <p class="result__text">/ person</p>
           </div>
-          <div><p class="number">$0.00</p></div>
+          <div><p class="tip-amount">$0.00</p></div>
         </div>
         <div class="amount">
           <div>
             <h2 class="result__title">Total</h2>
             <p class="result__text">/ person</p>
           </div>
-          <div><p class="number">$0.00</p></div>
+          <div><p class="total-person">$0.00</p></div>
         </div>
         <button class="btn btn--reset">RESET</button>
       </div>
     </section>
+
+    <script src="/script.js"></script>
   </body>
 </html>
