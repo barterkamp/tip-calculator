@@ -192,3 +192,8 @@ input {
     font-weight: bold;
   }
 }
+
+.calc__title—error {
+  color: red;
+  display: none;
+}

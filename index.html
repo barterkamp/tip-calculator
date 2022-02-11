@@ -35,7 +35,6 @@
         <div class="calc__error">
           <h2 class="calc__title">Rekening</h2>
           <!-- add calc__title--error class when validation fails-->
-          <h2>Input moet een cijfer zijn</h2>
         </div>
         <div class="calc__input-group">
           <input type="text" id="bill" name="bill" required placeholder="0" />
@@ -45,11 +44,11 @@
         <!-- buttons -->
         <h2 class="calc__title span">Selecteer fooi %</h2>
         <div class="calc__buttons">
-          <button class="btn btn--primary">5%</button>
-          <button class="btn btn--primary">10%</button>
-          <button class="btn btn--primary">15%</button>
-          <button class="btn btn--primary">25%</button>
-          <button class="btn btn--primary">50%</button>
+          <button class="btn btn--primary num5" data-number="5">5%</button>
+          <button class="btn btn--primary num10" data-number="10">10%</button>
+          <button class="btn btn--primary num15" data-number="15">15%</button>
+          <button class="btn btn--primary num25" data-number="25">25%</button>
+          <button class="btn btn--primary num50" data-number="50">50%</button>
           <input type="custom" id="custom" name="custom" placeholder="Custom" />
         </div>
 
@@ -57,7 +56,7 @@
         <div class="calc__error">
           <h2 class="calc__title">Aantal mensen</h2>
           <!-- add calc__title--error class when validation fails-->
-          <h2>Mag niet 0 zijn</h2>
+          <h2 class="calc__title—error">Mag niet 0 zijn</h2>
         </div>
         <div class="calc__input-group">
           <input
