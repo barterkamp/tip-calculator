@@ -149,18 +149,19 @@ input[type="number"] {
   /* display: block; */
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #9fe8df;
   color: var(--very-dark-cyan);
-}
-
-.btn:focus {
-  background-color: #26c2ae;
 }
 
 .btn--primary {
   background-color: var(--very-dark-cyan);
   color: white;
+}
+
+.btn--active {
+  background-color: #26c2ae;
 }
 
 .btn--reset {
