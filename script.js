@@ -18,7 +18,6 @@ let people = 1;
 // Get input from billInput
 billInput.addEventListener("input", () => {
   bill = +billInput.value.replace(",", ".");
-  calcTip();
 });
 
 // Loop through the buttons and add clickevent on buttons
@@ -65,6 +64,8 @@ peopleInput.addEventListener("input", () => {
   if (+peopleInput.value <= 0) {
     error.style.display = "block";
     peopleInput.style.border = "2px solid red";
+    tipAmount.textContent = "$0.00";
+    tipPerPerson.textContent = "$0.00";
     return;
   } else {
     error.style.display = "none";
