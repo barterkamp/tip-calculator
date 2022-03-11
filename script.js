@@ -7,7 +7,7 @@ const tipAmount = document.querySelector(".tip-amount");
 const tipPerPerson = document.querySelector(".total-person");
 const error = document.querySelector(".calc__people—error");
 const resetBtn = document.querySelector(".btn--reset");
-const tipustom = document.querySelector("#custom");
+const custom = document.querySelector("#custom");
 
 // Set default values for bill, percentage and number of persons
 
@@ -18,6 +18,7 @@ let people = 1;
 // Get input from billInput
 billInput.addEventListener("input", () => {
   bill = +billInput.value.replace(",", ".");
+  calcTip();
 });
 
 // Loop through the buttons and add clickevent on buttons
@@ -32,7 +33,6 @@ button.forEach((btn) => {
       if (e.target.textContent === btn.textContent) {
         btn.classList.add("btn--active");
         percentage = e.target.dataset.num / 100;
-        console.log(percentage);
       }
     });
 
@@ -78,12 +78,12 @@ function calcTip() {
   // calculate total tip amount
   if (people >= 1) {
     const totalTipAmount = (bill * percentage) / people;
-    tipAmount.textContent = `$${totalTipAmount.toFixed(2)}`;
+    tipAmount.textContent = `€${totalTipAmount.toFixed(2)}`;
 
     // calculate total amount per person
 
     const totalPerPerson = bill / people + totalTipAmount;
-    tipPerPerson.textContent = `$${totalPerPerson.toFixed(2)}`;
+    tipPerPerson.textContent = `€${totalPerPerson.toFixed(2)}`;
 
     resetBtn.style.backgroundColor = "#26C2AE";
   }
@@ -92,8 +92,8 @@ function calcTip() {
 //Reset functionality
 
 resetBtn.addEventListener("click", function () {
-  tipAmount.textContent = "$0.00";
-  tipPerPerson.textContent = "$0.00";
+  tipAmount.textContent = "€0.00";
+  tipPerPerson.textContent = "€0.00";
   billInput.value = "";
   peopleInput.value = "";
   bill = 0;
