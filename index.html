@@ -23,94 +23,93 @@
   </head>
   <body>
     <!-- logo section -->
+    <div class="wrapper">
+      <header class="logo"><img src="/images/logo.svg" alt="" /></header>
 
-    <header class="logo"><img src="/images/logo.svg" alt="" /></header>
+      <!-- calculator section -->
 
-    <!-- calculator section -->
+      <section class="calc__container">
+        <!-- Bill input  -->
 
-    <section class="calc__container">
-      <!-- Bill input  -->
-
-      <div class="input__container">
-        <div class="calc__input-group">
-          <label for="people">Bill</label>
-          <input
-            type="number"
-            id="bill"
-            name="bill"
-            placeholder="0"
-            step="0.01"
-            min="1"
-            max="100.000"
-            required
-          />
-          <img class="icon" src="/images/icon-dollar.svg" alt="" />
-        </div>
-
-        <!-- buttons -->
-
-        <h2 class="calc__title span">Select tip %</h2>
-        <div class="calc__buttons">
-          <button class="btn btn--primary" data-num="5">5%</button>
-          <button class="btn btn--primary" data-num="10">10%</button>
-          <button class="btn btn--primary btn--active" data-num="15">
-            15%
-          </button>
-          <button class="btn btn--primary" data-num="25">25%</button>
-          <button class="btn btn--primary" data-num="50">50%</button>
-          <input
-            type="number"
-            id="custom"
-            name="custom"
-            placeholder="Custom"
-            step="0.01"
-            min="1"
-            max="100.000"
-          />
-        </div>
-
-        <!-- Number of people -->
-
-        <div class="calc__error">
-          <h2 class="calc__title">Number of people</h2>
-          <h2 class="calc__people—error">Can't be 0</h2>
-        </div>
-
-        <div class="calc__input-group">
-          <input
-            type="number"
-            id="people"
-            placeholder="0"
-            step="1"
-            min="1"
-            max="1000"
-            required
-          />
-          <img class="icon2" src="/images/icon-person.svg" alt="" />
-        </div>
-      </div>
-
-      <!-- Tip result -->
-
-      <div class="result__container">
-        <div class="amount">
-          <div>
-            <h2 class="result__title">Tip Amount</h2>
-            <p class="result__text">/ person</p>
+        <div class="input__container">
+          <div class="calc__input-group">
+            <label for="people">Bill</label>
+            <input
+              type="number"
+              id="bill"
+              name="bill"
+              placeholder="0"
+              step="0.01"
+              min="1"
+              max="100.000"
+              required
+            />
+            <img class="icon" src="/images/icon-dollar.svg" alt="" />
           </div>
-          <div><p class="tip-amount">$0.00</p></div>
-        </div>
-        <div class="amount">
-          <div>
-            <h2 class="result__title">Total</h2>
-            <p class="result__text">/ person</p>
-          </div>
-          <div><p class="total-person">$0.00</p></div>
-        </div>
-        <button class="btn btn--reset">RESET</button>
-      </div>
-    </section>
 
-    <script src="/script.js"></script>
+          <!-- buttons -->
+
+          <h2 class="calc__title span">Select tip %</h2>
+          <div class="calc__buttons">
+            <button class="btn btn--primary" data-num="5">5%</button>
+            <button class="btn btn--primary" data-num="10">10%</button>
+            <button class="btn btn--primary" data-num="15">15%</button>
+            <button class="btn btn--primary" data-num="25">25%</button>
+            <button class="btn btn--primary" data-num="50">50%</button>
+            <input
+              type="number"
+              id="custom"
+              name="custom"
+              placeholder="Custom"
+              step="0.01"
+              min="1"
+              max="100"
+            />
+          </div>
+
+          <!-- Number of people -->
+
+          <div class="calc__error">
+            <h2 class="calc__title">Number of people</h2>
+            <h2 class="calc__people—error">Can't be 0</h2>
+          </div>
+
+          <div class="calc__input-group">
+            <input
+              type="number"
+              id="people"
+              placeholder="1"
+              step="1"
+              min="1"
+              max="1000"
+              required
+            />
+            <img class="icon2" src="/images/icon-person.svg" alt="" />
+          </div>
+        </div>
+
+        <!-- Tip result -->
+
+        <div class="result__container">
+          <div class="amount">
+            <div>
+              <h2 class="result__title">Tip Amount</h2>
+              <p class="result__text">/ person</p>
+            </div>
+            <div><p class="tip-amount">$0.00</p></div>
+          </div>
+          <div class="amount">
+            <div>
+              <h2 class="result__title">Total</h2>
+              <p class="result__text">/ person</p>
+            </div>
+            <div><p class="total-person">$0.00</p></div>
+          </div>
+          <button class="btn btn--reset">RESET</button>
+        </div>
+      </section>
+
+      <script src="/script.js"></script>
+    </div>
   </body>
 </html>

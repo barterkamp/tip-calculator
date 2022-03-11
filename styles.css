@@ -21,17 +21,20 @@ html {
 body {
   background-color: var(--background-color);
   font-family: "Space Mono", monospace;
+  /* height: 100vh; */
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5rem;
 }
 
-/* tablet breakpoint */
-
 .logo {
   margin-top: 5rem;
 }
+
 /* Calculator styles */
 
 .calc__container {
@@ -40,9 +43,19 @@ body {
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
+  min-width: 375px;
 }
 
 @media (min-width: 600px) {
+  .wrapper {
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
   .calc__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

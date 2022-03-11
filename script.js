@@ -12,7 +12,7 @@ const tipustom = document.querySelector("#custom");
 // Set default values for bill, percentage and number of persons
 
 let bill = 0;
-let percentage = 0.15;
+let percentage = 0;
 let people = 1;
 
 // Get input from billInput
@@ -22,25 +22,30 @@ billInput.addEventListener("input", () => {
 });
 
 // Loop through the buttons and add clickevent on buttons
+
 button.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    // remove active class from buttons
     button.forEach((btn) => {
-      // remove active class from buttons
       btn.classList.remove("btn--active");
+
       // add active class on active buttons
       if (e.target.textContent === btn.textContent) {
-        btn.classList.add("btn-active");
+        btn.classList.add("btn--active");
         percentage = e.target.dataset.num / 100;
         console.log(percentage);
       }
     });
+
     //reset custom value
+
     custom.value = "";
     calcTip();
   });
 });
 
 // Get input from custom input
+
 custom.addEventListener("input", () => {
   percentage = +custom.value.replace(",", ".") / 100;
   button.forEach((btn) => {
@@ -53,9 +58,19 @@ custom.addEventListener("input", () => {
 });
 
 // Get input from peopleInput
+
 peopleInput.addEventListener("input", () => {
   people = +peopleInput.value.replace(",", ".");
   calcTip();
+  if (+peopleInput.value <= 0) {
+    error.style.display = "block";
+    peopleInput.style.border = "2px solid red";
+    return;
+  } else {
+    error.style.display = "none";
+    peopleInput.style.border = "none";
+    calcTip();
+  }
 });
 
 function calcTip() {
@@ -65,6 +80,7 @@ function calcTip() {
     tipAmount.textContent = `$${totalTipAmount.toFixed(2)}`;
 
     // calculate total amount per person
+
     const totalPerPerson = bill / people + totalTipAmount;
     tipPerPerson.textContent = `$${totalPerPerson.toFixed(2)}`;
 
@@ -78,9 +94,9 @@ resetBtn.addEventListener("click", function () {
   tipAmount.textContent = "$0.00";
   tipPerPerson.textContent = "$0.00";
   billInput.value = "";
-  bill = 0;
   peopleInput.value = "";
-  people = 0;
-  percentage = 0.15;
+  bill = 0;
+  percentage = 0;
+  people = 1;
   resetBtn.style.backgroundColor = "#0d686d";
 });
