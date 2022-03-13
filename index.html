@@ -9,29 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
     <title>Tip calculator app | coded by Bart Erkamp (2022)</title>
-
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <!-- logo section -->
+    <!-- Logo section -->
     <div class="wrapper">
-      <header class="logo"><img src="/images/logo.svg" alt="" /></header>
+      <header class="logo">
+        <img src="/images/logo.svg" alt="Calculator logo" />
+      </header>
 
-      <!-- calculator section -->
+      <!-- Calculator section -->
 
       <section class="calc__container">
         <!-- Bill input  -->
 
-        <div class="input__container">
+        <div class="calc__input__container">
           <div class="calc__input-group">
             <label for="people">Rekening</label>
             <input
@@ -47,7 +40,7 @@
             <img class="icon" src="/images/euro-3-16.png" alt="" />
           </div>
 
-          <!-- buttons -->
+          <!-- Buttons -->
 
           <h2 class="calc__title span">Selecteer %</h2>
           <div class="calc__buttons">
@@ -67,7 +60,7 @@
             />
           </div>
 
-          <!-- Number of people -->
+          <!-- People input -->
 
           <div class="calc__error">
             <h2 class="calc__title">Aantal mensen</h2>
@@ -96,16 +89,20 @@
               <h2 class="result__title">Fooibedrag</h2>
               <p class="result__text">/ persoon</p>
             </div>
-            <div><p class="tip-amount">€0.00</p></div>
+            <div>
+              <p class="tip-amount">€0.00</p>
+            </div>
           </div>
           <div class="amount">
             <div>
               <h2 class="result__title">Totaal</h2>
               <p class="result__text">/ persoon</p>
             </div>
-            <div><p class="total-person">€0.00</p></div>
+            <div>
+              <p class="total-person">€0.00</p>
+            </div>
           </div>
-          <button class="btn btn--reset">RESET</button>
+          <button class="btn btn--reset">reset</button>
         </div>
       </section>
 

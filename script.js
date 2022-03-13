@@ -28,7 +28,6 @@ button.forEach((btn) => {
     // remove active class from buttons
     button.forEach((btn) => {
       btn.classList.remove("btn--active");
-
       // add active class on active buttons
       if (e.target.textContent === btn.textContent) {
         btn.classList.add("btn--active");
@@ -36,8 +35,7 @@ button.forEach((btn) => {
       }
     });
 
-    //reset custom value
-
+    // reset custom value
     custom.value = "";
     calcTip();
   });
@@ -64,8 +62,8 @@ peopleInput.addEventListener("input", () => {
   if (+peopleInput.value <= 0) {
     error.style.display = "block";
     peopleInput.style.border = "2px solid red";
-    tipAmount.textContent = "$0.00";
-    tipPerPerson.textContent = "$0.00";
+    tipAmount.textContent = "€0.00";
+    tipPerPerson.textContent = "€0.00";
     return;
   } else {
     error.style.display = "none";
@@ -76,6 +74,7 @@ peopleInput.addEventListener("input", () => {
 
 function calcTip() {
   // calculate total tip amount
+
   if (people >= 1) {
     const totalTipAmount = (bill * percentage) / people;
     tipAmount.textContent = `€${totalTipAmount.toFixed(2)}`;
